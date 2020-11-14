@@ -1,0 +1,236 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+main {
+  min-height: 100vh;
+  background: url("./assets/aethrum-3vkMq0z66Ew-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+/* general */
+.xs-text {
+  font-size: 0.6rem;
+}
+.small-text {
+  font-size: 0.8rem;
+}
+
+.medium-text {
+  font-size: 1.5rem;
+}
+
+/* Navigation */
+nav {
+  min-height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 1rem;
+  background-color: rgb(9 18 140);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 4rem;
+}
+
+.layout {
+  margin: auto;
+  width: 70%;
+}
+
+/* main temp info */
+.main-temp-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 17rem;
+  margin: 1.2rem auto;
+}
+
+#city-name {
+  font-weight: lighter;
+  font-size: 1.2rem;
+}
+.main-temp__info {
+  margin: 0.5rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main-temp__symbol {
+  margin-right: 1rem;
+}
+
+.main-temp__symbol ion-icon {
+  font-size: 3rem;
+  color: rgb(250, 203, 50);
+}
+
+.main-temp__temperature {
+  display: flex;
+  margin-right: 1rem;
+  position: relative;
+}
+
+#temperature {
+  font-size: 4.5rem;
+  font-weight: 300;
+  margin-right: 16px;
+}
+
+.main-temp__temperature .symbol {
+  font-size: 2rem;
+  position: absolute;
+  top: 12px;
+  right: 0px;
+}
+
+.main-temp__description {
+  margin-bottom: 0.5rem;
+}
+
+.main-temp__units {
+  position: absolute;
+  top: 16px;
+  right: 0px;
+}
+
+.main-temp__update {
+  font-size: 0.8rem;
+}
+
+.main-temp__detail {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+}
+
+.main-temp__detail p {
+  font-size: 0.6rem;
+}
+
+/* Daily temperature */
+.daily-temp-container {
+  overflow-x: hidden;
+  width: 100%;
+}
+.daily-temp-container h2 {
+  font-weight: lighter;
+}
+
+.daily-temp-list {
+  margin-top: 2rem;
+  display: flex;
+}
+
+.daily-temp {
+  width: 8rem;
+  padding: 1rem 1rem 1rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.daily-temp.active {
+  background: rgba(80, 80, 80, 0.164);
+}
+
+.daily-temp__symbol,
+.daily-temp p {
+  margin-bottom: 0.5rem;
+}
+
+.daily-temp__symbol ion-icon {
+  font-size: 2rem;
+}
+
+.daily-temp__temperature {
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+.daily-temp__temperature span {
+  font-size: 1rem;
+  padding-left: 0.5rem;
+}
+
+.daily-temp__description {
+  font-size: 0.8rem;
+}
+
+.daily-temp:hover {
+  border: 1px solid rgb(255, 255, 255);
+}
+
+/* hourly temperature info */
+.hourly-temp-container {
+  margin-top: 1.5rem;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.hourly-temp-container h2 {
+  font-weight: lighter;
+}
+
+.hourly-temp-carousel {
+  width: 100%;
+  overflow-y: hidden;
+  margin-top: 1.5rem;
+  display: flex;
+}
+
+.hourly-temp {
+  min-width: 7rem;
+}
+
+.hourly-temp__layout {
+  border-top: 1px solid rgb(73, 73, 73);
+  border-bottom: 1px solid rgb(73, 73, 73);
+}
+
+.hourly-temp__weather {
+  width: 100%;
+  padding: 0.5rem 0rem 0rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.hourly-temp__weather ion-icon {
+  font-size: 2rem;
+}
+.hourly-temp__weather p {
+  padding-top: 0.2rem;
+  font-weight: lighter;
+}
+
+.hourly-temp__extra-info {
+  padding: 0rem 0rem 0.5rem 1rem;
+}
+
+.hourly-temp__extra-info p {
+  padding-bottom: 0.4rem;
+}
+
+.hourly-temp__hour {
+  padding: 0.5rem 0rem 0rem 1rem;
+}
+
+.hourly-temp__hour p {
+  font-weight: bold;
+}

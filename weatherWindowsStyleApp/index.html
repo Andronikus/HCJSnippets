@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <main>
+        <section>
+            <nav>
+                <h1 id="logo">Forecast</h1>
+                <ul class="nav-links">
+                    <li>refresh</li>
+                    <li>Favorite</li>
+                    <li>Search</li>
+                </ul>
+            </nav>
+            <div class="layout">
+                <div class="main-temp-container">
+                    <h2 id='city-name'>Aveiro</h2>
+                    <div class="main-temp__info">
+                        <div class="main-temp__symbol">
+                            <ion-icon name="sunny-outline"></ion-icon>
+                        </div>
+                        <div class="main-temp__temperature">
+                            <p id='temperature'>13</p>
+                            <span class="symbol">º</span>
+                        </div>
+                        <div class=main-temp__units>
+                            <p>C</p>
+                            <a>F</a>
+                        </div>
+                    </div>
+                    <p class="main-temp__description">Sunny</p>
+                    <p class="main-temp__update">Updated as of <span id="update_time">10:33</span></p>
+                    <div class="main-temp__detail">
+                        <p>Feels like <span>13º</span></p>
+                        <p>Wind <span id="wind">1</span> mph</p>
+                        <p>Visibility <span id="wind">6.2</span> mi</p>
+                    </div>
+                    <div class="main-temp__detail">
+                        <p>Barometer <span id="barometer">1021.00</span>mb</p>
+                        <p>Humidity <span id="humidity">88</span> %</p>
+                        <p>Dew Point <span id="dew_point">13</span> º</p>
+                    </div>
+                </div>
+                <!-- daily temperature list -->
+                <div class="daily-temp-container">
+                    <h2>Daily</h2>
+                    <div class="daily-temp-list">
+                        <div class="daily-temp active">
+                            <p>Fri 13</p>
+                            <div class="daily-temp__symbol">
+                                <ion-icon name="partly-sunny-outline"></ion-icon>
+                            </div>
+                            <p class="daily-temp__temperature"> 21º<span>14º</span></p>
+                            <p class="daily-temp__description">Partly Sunny</p>
+                        </div>
+                        <div class="daily-temp">
+                            <p>Sat 14</p>
+                            <div class="daily-temp__symbol">
+                                <ion-icon name="rainy-outline"></ion-icon>
+                            </div>
+                            <p class="daily-temp__temperature"> 19º<span>15º</span></p>
+                            <p class="daily-temp__description">Rain Showers</p>
+                        </div>
+                        <div class="daily-temp">
+                            <p>Sat 14</p>
+                            <div class="daily-temp__symbol">
+                                <ion-icon name="rainy-outline"></ion-icon>
+                            </div>
+                            <p class="daily-temp__temperature"> 19º<span>15º</span></p>
+                            <p class="daily-temp__description">Rain Showers</p>
+                        </div>
+                        <div class="daily-temp">
+                            <p>Sat 14</p>
+                            <div class="daily-temp__symbol">
+                                <ion-icon name="rainy-outline"></ion-icon>
+                            </div>
+                            <p class="daily-temp__temperature"> 19º<span>15º</span></p>
+                            <p class="daily-temp__description">Rain Showers</p>
+                        </div>
+                        <div class="daily-temp">
+                            <p>Sat 14</p>
+                            <div class="daily-temp__symbol">
+                                <ion-icon name="rainy-outline"></ion-icon>
+                            </div>
+                            <p class="daily-temp__temperature"> 19º<span>15º</span></p>
+                            <p class="daily-temp__description">Rain Showers</p>
+                        </div>
+                        <div class="daily-temp">
+                            <p>Sat 14</p>
+                            <div class="daily-temp__symbol">
+                                <ion-icon name="rainy-outline"></ion-icon>
+                            </div>
+                            <p class="daily-temp__temperature"> 19º<span>15º</span></p>
+                            <p class="daily-temp__description">Rain Showers</p>
+                        </div>
+                        <div class="daily-temp">
+                            <p>Sat 14</p>
+                            <div class="daily-temp__symbol">
+                                <ion-icon name="rainy-outline"></ion-icon>
+                            </div>
+                            <p class="daily-temp__temperature"> 19º<span>15º</span></p>
+                            <p class="daily-temp__description">Rain Showers</p>
+                        </div>
+                        <div class="daily-temp">
+                            <p>Sat 14</p>
+                            <div class="daily-temp__symbol">
+                                <ion-icon name="rainy-outline"></ion-icon>
+                            </div>
+                            <p class="daily-temp__temperature"> 19º<span>15º</span></p>
+                            <p class="daily-temp__description">Rain Showers</p>
+                        </div>
+                        <div class="daily-temp">
+                            <p>Sat 14</p>
+                            <div class="daily-temp__symbol">
+                                <ion-icon name="rainy-outline"></ion-icon>
+                            </div>
+                            <p class="daily-temp__temperature"> 19º<span>15º</span></p>
+                            <p class="daily-temp__description">Rain Showers</p>
+                        </div>
+                        <div class="daily-temp">
+                            <p>Sat 14</p>
+                            <div class="daily-temp__symbol">
+                                <ion-icon name="rainy-outline"></ion-icon>
+                            </div>
+                            <p class="daily-temp__temperature"> 19º<span>15º</span></p>
+                            <p class="daily-temp__description">Rain Showers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hourly-temp-container">
+                    <h2>Hourly</h2>
+                    <div class="hourly-temp-carousel">
+                        <div class="hourly-temp">
+                            <div class="hourly-temp__layout">
+                                <div class="hourly-temp__weather">
+                                    <ion-icon name="rainy-outline"></ion-icon>
+                                    <p class="medium-text">18 <span>º</span></p>
+                                    <p class="xs-text">Cloudly</p>
+                                </div>
+                                <div class="hourly-temp__extra-info">
+                                    <p class="xs-text">
+                                        <ion-icon name="water"></ion-icon> <span>40%</span>
+                                    </p>
+                                    <p class="xs-text">
+                                        <ion-icon name="navigate"></ion-icon> <span>9 mph</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hourly-temp__hour">
+                                <p class="small-text">16:00</p>
+                            </div>
+                        </div>
+                        <div class="hourly-temp">
+                            <div class="hourly-temp__layout">
+                                <div class="hourly-temp__weather">
+                                    <ion-icon name="rainy-outline"></ion-icon>
+                                    <p class="medium-text">18 <span>º</span></p>
+                                    <p class="xs-text">Cloudly</p>
+                                </div>
+                                <div class="hourly-temp__extra-info">
+                                    <p class="xs-text">
+                                        <ion-icon name="water"></ion-icon> <span>40%</span>
+                                    </p>
+                                    <p class="xs-text">
+                                        <ion-icon name="navigate"></ion-icon> <span>9 mph</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hourly-temp__hour">
+                                <p class="small-text">16:00</p>
+                            </div>
+                        </div>
+                        <div class="hourly-temp">
+                            <div class="hourly-temp__layout">
+                                <div class="hourly-temp__weather">
+                                    <ion-icon name="rainy-outline"></ion-icon>
+                                    <p class="medium-text">18 <span>º</span></p>
+                                    <p class="xs-text">Cloudly</p>
+                                </div>
+                                <div class="hourly-temp__extra-info">
+                                    <p class="xs-text">
+                                        <ion-icon name="water"></ion-icon> <span>40%</span>
+                                    </p>
+                                    <p class="xs-text">
+                                        <ion-icon name="navigate"></ion-icon> <span>9 mph</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hourly-temp__hour">
+                                <p class="small-text">16:00</p>
+                            </div>
+                        </div>
+                        <div class="hourly-temp">
+                            <div class="hourly-temp__layout">
+                                <div class="hourly-temp__weather">
+                                    <ion-icon name="rainy-outline"></ion-icon>
+                                    <p class="medium-text">18 <span>º</span></p>
+                                    <p class="xs-text">Cloudly</p>
+                                </div>
+                                <div class="hourly-temp__extra-info">
+                                    <p class="xs-text">
+                                        <ion-icon name="water"></ion-icon> <span>40%</span>
+                                    </p>
+                                    <p class="xs-text">
+                                        <ion-icon name="navigate"></ion-icon> <span>9 mph</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hourly-temp__hour">
+                                <p class="small-text">16:00</p>
+                            </div>
+                        </div>
+                        <div class="hourly-temp">
+                            <div class="hourly-temp__layout">
+                                <div class="hourly-temp__weather">
+                                    <ion-icon name="rainy-outline"></ion-icon>
+                                    <p class="medium-text">18 <span>º</span></p>
+                                    <p class="xs-text">Cloudly</p>
+                                </div>
+                                <div class="hourly-temp__extra-info">
+                                    <p class="xs-text">
+                                        <ion-icon name="water"></ion-icon> <span>40%</span>
+                                    </p>
+                                    <p class="xs-text">
+                                        <ion-icon name="navigate"></ion-icon> <span>9 mph</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hourly-temp__hour">
+                                <p class="small-text">16:00</p>
+                            </div>
+                        </div>
+                        <div class="hourly-temp">
+                            <div class="hourly-temp__layout">
+                                <div class="hourly-temp__weather">
+                                    <ion-icon name="rainy-outline"></ion-icon>
+                                    <p class="medium-text">18 <span>º</span></p>
+                                    <p class="xs-text">Cloudly</p>
+                                </div>
+                                <div class="hourly-temp__extra-info">
+                                    <p class="xs-text">
+                                        <ion-icon name="water"></ion-icon> <span>40%</span>
+                                    </p>
+                                    <p class="xs-text">
+                                        <ion-icon name="navigate"></ion-icon> <span>9 mph</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hourly-temp__hour">
+                                <p class="small-text">16:00</p>
+                            </div>
+                        </div>
+                        <div class="hourly-temp">
+                            <div class="hourly-temp__layout">
+                                <div class="hourly-temp__weather">
+                                    <ion-icon name="rainy-outline"></ion-icon>
+                                    <p class="medium-text">18 <span>º</span></p>
+                                    <p class="xs-text">Cloudly</p>
+                                </div>
+                                <div class="hourly-temp__extra-info">
+                                    <p class="xs-text">
+                                        <ion-icon name="water"></ion-icon> <span>40%</span>
+                                    </p>
+                                    <p class="xs-text">
+                                        <ion-icon name="navigate"></ion-icon> <span>9 mph</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hourly-temp__hour">
+                                <p class="small-text">16:00</p>
+                            </div>
+                        </div>
+                        <div class="hourly-temp">
+                            <div class="hourly-temp__layout">
+                                <div class="hourly-temp__weather">
+                                    <ion-icon name="rainy-outline"></ion-icon>
+                                    <p class="medium-text">18 <span>º</span></p>
+                                    <p class="xs-text">Cloudly</p>
+                                </div>
+                                <div class="hourly-temp__extra-info">
+                                    <p class="xs-text">
+                                        <ion-icon name="water"></ion-icon> <span>40%</span>
+                                    </p>
+                                    <p class="xs-text">
+                                        <ion-icon name="navigate"></ion-icon> <span>9 mph</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hourly-temp__hour">
+                                <p class="small-text">16:00</p>
+                            </div>
+                        </div>
+                        <div class="hourly-temp">
+                            <div class="hourly-temp__layout">
+                                <div class="hourly-temp__weather">
+                                    <ion-icon name="rainy-outline"></ion-icon>
+                                    <p class="medium-text">18 <span>º</span></p>
+                                    <p class="xs-text">Cloudly</p>
+                                </div>
+                                <div class="hourly-temp__extra-info">
+                                    <p class="xs-text">
+                                        <ion-icon name="water"></ion-icon> <span>40%</span>
+                                    </p>
+                                    <p class="xs-text">
+                                        <ion-icon name="navigate"></ion-icon> <span>9 mph</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hourly-temp__hour">
+                                <p class="small-text">16:00</p>
+                            </div>
+                        </div>
+                        <div class="hourly-temp">
+                            <div class="hourly-temp__layout">
+                                <div class="hourly-temp__weather">
+                                    <ion-icon name="rainy-outline"></ion-icon>
+                                    <p class="medium-text">18 <span>º</span></p>
+                                    <p class="xs-text">Cloudly</p>
+                                </div>
+                                <div class="hourly-temp__extra-info">
+                                    <p class="xs-text">
+                                        <ion-icon name="water"></ion-icon> <span>40%</span>
+                                    </p>
+                                    <p class="xs-text">
+                                        <ion-icon name="navigate"></ion-icon> <span>9 mph</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hourly-temp__hour">
+                                <p class="small-text">16:00</p>
+                            </div>
+                        </div>
+                        <div class="hourly-temp">
+                            <div class="hourly-temp__layout">
+                                <div class="hourly-temp__weather">
+                                    <ion-icon name="rainy-outline"></ion-icon>
+                                    <p class="medium-text">18 <span>º</span></p>
+                                    <p class="xs-text">Cloudly</p>
+                                </div>
+                                <div class="hourly-temp__extra-info">
+                                    <p class="xs-text">
+                                        <ion-icon name="water"></ion-icon> <span>40%</span>
+                                    </p>
+                                    <p class="xs-text">
+                                        <ion-icon name="navigate"></ion-icon> <span>9 mph</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hourly-temp__hour">
+                                <p class="small-text">16:00</p>
+                            </div>
+                        </div>
+                        <div class="hourly-temp">
+                            <div class="hourly-temp__layout">
+                                <div class="hourly-temp__weather">
+                                    <ion-icon name="rainy-outline"></ion-icon>
+                                    <p class="medium-text">18 <span>º</span></p>
+                                    <p class="xs-text">Cloudly</p>
+                                </div>
+                                <div class="hourly-temp__extra-info">
+                                    <p class="xs-text">
+                                        <ion-icon name="water"></ion-icon> <span>40%</span>
+                                    </p>
+                                    <p class="xs-text">
+                                        <ion-icon name="navigate"></ion-icon> <span>9 mph</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hourly-temp__hour">
+                                <p class="small-text">16:00</p>
+                            </div>
+                        </div>
+                        <div class="hourly-temp">
+                            <div class="hourly-temp__layout">
+                                <div class="hourly-temp__weather">
+                                    <ion-icon name="rainy-outline"></ion-icon>
+                                    <p class="medium-text">18 <span>º</span></p>
+                                    <p class="xs-text">Cloudly</p>
+                                </div>
+                                <div class="hourly-temp__extra-info">
+                                    <p class="xs-text">
+                                        <ion-icon name="water"></ion-icon> <span>40%</span>
+                                    </p>
+                                    <p class="xs-text">
+                                        <ion-icon name="navigate"></ion-icon> <span>9 mph</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="hourly-temp__hour">
+                                <p class="small-text">16:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <script src="./script.js"> </script>
+</body>
+
+</html>
