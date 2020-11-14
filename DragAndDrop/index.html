@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop</title>
+    <link rel="icon" type="image/png" href="http://www.google.com/s2/favicons?domain=css-tricks.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h1 class="main-title">Kanban Board</h1>
+    <!-- drag and drop container -->
+    <div class="drag-container">
+        <!-- drag and drop list -->
+        <ul class="drag-list">
+            <!-- Backlog column -->
+            <li class="drag-column backlog-column">
+                <div class="header">
+                    <h1>Backlog</h1>
+                </div>
+                <div class="backlog-content custom-scrollbar" ondragover="dragOver(event)"
+                    ondragenter="dragEnter(event, 0)" ondrop="onDropHandler(event)">
+                    <ul id="backlog-list" class="drag-item-list">
+                    </ul>
+                </div>
+                <!-- Buttons -->
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showAddItemContainer(0)">
+                        <span class="plus-sign">+</span>
+                        <span>Add Item</span>
+                    </div>
+                    <div class="add-btn solid" onclick="hideAddItemContainer(0)">
+                        <span>Save Item</span>
+                    </div>
+                </div>
+                <div class="add-container">
+                    <div class="add-item" contenteditable="true"></div>
+                </div>
+            </li>
+            <!-- Progress column -->
+            <li class="drag-column progress-column">
+                <div class="header">
+                    <h1>In Progress</h1>
+                </div>
+                <div class="progress-content custom-scrollbar" ondragover="dragOver(event)"
+                    ondragenter="dragEnter(event, 1)" ondrop="onDropHandler(event)">
+                    <ul id="progress-list" class="drag-item-list">
+                    </ul>
+                </div>
+                <!-- Buttons -->
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showAddItemContainer(1)">
+                        <span class="plus-sign">+</span>
+                        <span>Add Item</span>
+                    </div>
+                    <div class="add-btn solid" onclick="hideAddItemContainer(1)">
+                        <span>Save Item</span>
+                    </div>
+                </div>
+                <div class=" add-container">
+                    <div class="add-item" contenteditable="true"></div>
+                </div>
+            </li>
+            <!-- Complete column -->
+            <li class="drag-column complete-column">
+                <div class="header">
+                    <h1>Complete</h1>
+                </div>
+                <div class="complete-content custom-scrollbar" ondragover="dragOver(event)"
+                    ondragenter="dragEnter(event, 2)" ondrop="onDropHandler(event)">
+                    <ul id="complete-list" class="drag-item-list">
+                    </ul>
+                </div>
+                <!-- Buttons -->
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showAddItemContainer(2)">
+                        <span class="plus-sign">+</span>
+                        <span>Add Item</span>
+                    </div>
+                    <div class="add-btn solid" onclick="hideAddItemContainer(2)">
+                        <span>Save Item</span>
+                    </div>
+                </div>
+                <div class="add-container">
+                    <div class="add-item" contenteditable="true"></div>
+                </div>
+            </li>
+            <!-- Hold column -->
+            <li class="drag-column hold-column">
+                <div class="header">
+                    <h1>On Hold</h1>
+                </div>
+                <div class="hold-content custom-scrollbar" ondragover="dragOver(event)"
+                    ondragenter="dragEnter(event, 3)" ondrop="onDropHandler(event)">
+                    <ul id="hold-list" class="drag-item-list">
+
+                    </ul>
+                </div>
+                <!-- Buttons -->
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showAddItemContainer(3)">
+                        <span class="plus-sign">+</span>
+                        <span>Add Item</span>
+                    </div>
+                    <div class="add-btn solid" onclick="hideAddItemContainer(3)">
+                        <span>Save Item</span>
+                    </div>
+                </div>
+                <div class=" add-container">
+                    <div class="add-item" contenteditable="true"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
