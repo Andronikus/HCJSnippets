@@ -185,7 +185,8 @@ nav {
   overflow-x: hidden;
 }
 
-.hourly-temp-container h2 {
+.hourly-temp-container h2,
+.day-details-container h2 {
   font-weight: lighter;
 }
 
@@ -233,4 +234,37 @@ nav {
 
 .hourly-temp__hour p {
   font-weight: bold;
+}
+
+/* day details */
+.day-details-container {
+  margin-top: 1.5rem;
+}
+
+.day-details-items {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 1rem 0rem;
+}
+
+.day-details-items h3 {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.day-details-item__day-night-description,
+.day-details-item__sun-state,
+.day-details-item__moon-state {
+  width: 25%;
+  border-top: 1px solid rgb(73, 73, 73);
+  margin-right: 20px;
+  padding: 1rem 0rem;
+}
+
+.day-details-item__night-description,
+.day-details-item__sunset,
+.day-details-item__moonset,
+.day-details-item__moonphase {
+  margin-top: 1rem;
 }
