@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awsome slide out navigation</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <img class="activator" id="activator" src="https://s.svgbox.net/materialui.svg?ic=sort&fill=fff">
+        <nav>
+            <ul>
+                <li><a href=""><img src="https://s.svgbox.net/materialui.svg?ic=access_alarm&fill=590772"></a></li>
+                <li><a href=""><img src="https://s.svgbox.net/materialui.svg?ic=alarm_on&fill=590772"></a></li>
+                <li><a href=""><img src="https://s.svgbox.net/materialui.svg?ic=alarm_off&fill=590772"></a></li>
+                <li><a href=""><img src="https://s.svgbox.net/materialui.svg?ic=alarm_add&fill=590772"></a></li>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+        integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"
+        integrity="sha512-6MT8e40N5u36Um5SXKtwZmoKcCSg1XaKtexnXZPpQ4iJDHrBEHXKz37fnDovXezsaCd4oKCH5Y+vrcl7qpLPoA=="
+        crossorigin="anonymous"></script>
+    <script>
+        const card = document.getElementById("activator");
+        const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+        let toggle = false;
+
+        tl.to('.activator', {
+            background: '#805ad5',
+            'borderRadius': '50% 0 0 50%'
+        });
+
+        tl.to('nav', {
+            'clipPath': 'ellipse(100% 100% at 50% 50%)'
+        }, "-=0.5");
+
+        tl.to('nav img', {
+            opacity: "1",
+            transform: "translateX(0)",
+            stagger: .05
+        }, "-=0.5");
+
+        tl.pause();
+
+        card.addEventListener('click', function () {
+            toggle = !toggle;
+            toggle ? tl.play() : tl.reverse();
+        })
+
+
+    </script>
+</body>
+
+</html>
